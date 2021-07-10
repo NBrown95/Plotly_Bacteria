@@ -119,7 +119,10 @@ function buildCharts(sample) {
   
     // Deliverable 3:
     // 3. Create a variable that holds the washing frequency.
-    var frequency = parseFloat(first.wfreq);
+    var metadata = data.metadata;
+    var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    var result = resultArray[0];
+    var frequency = parseFloat(result.wfreq);
     // 4. Create the trace for the gauge chart.
     var trace3 = {
       value: frequency,
