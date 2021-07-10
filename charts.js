@@ -79,7 +79,8 @@ function buildCharts(sample) {
       y: yticks,
       text: labels.slice(0,10).reverse(),
       type: "bar",
-      orientation: "h"
+      orientation: "h",
+      bgcolor: "slategray"
     };
 
     var barData = [trace];
@@ -102,7 +103,8 @@ function buildCharts(sample) {
       marker: {
         size: values,
         color: ids
-      }
+      },
+      bgcolor: "slategray"
     };
 
     var bubbleData = [trace2];
@@ -132,6 +134,7 @@ function buildCharts(sample) {
       gauge: {
         axis: {range: [0, 10]},
         bar: {color: "black"},
+        bgcolor: "slategray",
         steps: [
           {range: [0,2], color: "red"},
           {range: [2,4], color: "orange"},
